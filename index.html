@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>audio</title>
+    <link rel="icon" href="./assets/img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="playlist">
+            <div class="playlist__song selected" id="0">
+                <img src="./assets/cover/George_Davidson-Mariage_DAmour.jpg"
+                    alt="" class="playlist__song-cover">
+                <div class="playlist__song-info">
+                    <span class="playlist_track">Mariage D'Amour</span>
+                    <span class="playlist_track">George Davidson</span>
+                </div>
+            </div>
+            <div class="playlist__song" id="1">
+                <img src="./assets/cover/Egor_Grushin-Charming_Smile.jpg" alt=""  class="playlist__song-cover">
+                <div class="playlist__song-info">
+                    <span class="playlist_track">Charming Smile</span>
+                    <span class="playlist_track">Egor Grushin</span>
+                </div>
+            </div>
+            <div class="playlist__song" id="2">
+                <img src="./assets/cover/Giovanni_Marradi-Historia_de_un_Amor.jpg" alt=""  class="playlist__song-cover">
+                <div class="playlist__song-info">
+                    <span class="playlist_track">Historia de un Amor</span>
+                    <span class="playlist_track">Giovanni Marradi</span>
+                </div>
+            </div>
+            <div class="playlist__song" id="3">
+                <img src="./assets/cover/Fabrizio_Paterlini-Veloma.jpg" alt=""  class="playlist__song-cover">
+                <div class="playlist__song-info">
+                    <span class="playlist_track">Veloma</span>
+                    <span class="playlist_track">Fabrizio Paterlini</span>
+                </div>
+            </div>
+        </div>
+        <header class="header">
+            <span class="header__playlist-link"><-playlist</span>
+        </header>
+        <main class="app">
+            <audio preload="metadata" src="./assets/audio/George_Davidson-Mariage_DAmour.mp3" class="audio"></audio>
+            <div class="app--song-info">
+                <img src="./assets/cover/George_Davidson-Mariage_DAmour.jpg" alt="cover" class="song-info__cover">
+                <div class="song-info__description">
+                    <span class="description__song-name">Mariage D'Amour</span>
+                    <span class="description__author-name">George Davidson</span>
+                </div>
+            </div>
+            <div class="app--player-control">
+                <div class="control__progress">
+                    <input type="range" class="progress" min="0" max="1" step="0.01" value="0">
+                    <div class="time">
+                        <span class="current">0:00</span> / <span class="duration">0:00</span>
+                    </div>
+                </div>
+                <div class="control__buttons">
+                    <button class="button button-backward"></button>
+                    <button class="button button-play"></button>
+                    <button class="button button-forward"></button>
+                </div>
+                <div class="control__volume">
+                    <div class="volume-icon low"></div>
+                    <input type="range" class="volume" min="0" max="1" step="0.01" value="0.2">
+                    <div class="volume-icon high"></div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>© 2022</p>
+            <a href="https://github.com/elsuppo" class="footer__github-link" target="_blank">elsuppo</a>
+            <a href="https://rs.school/js-stage0" class="footer__course-link" target="_blank"><img src="./assets/svg/rs_school_js.svg" alt=""></a>
+        </footer>
+    </div>
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
